@@ -10,7 +10,7 @@ int main()
 	
 	// Fill array
 	for (int i = 0; i < SIZE; i++)
-		float_arr.storeValue(i, rand() % 100);
+		float_arr.storeValue(i, (((float) rand() / RAND_MAX) * 100) );
 
 	for (int i = 0; i < SIZE; i++)
 		std::cout << float_arr.retrieveValue(i) << " ";
