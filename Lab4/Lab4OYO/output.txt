@@ -1,0 +1,82 @@
+Entering constructor
+Entering constructor
+[] operator with 0
+[] operator with 1
+[] operator with 2
+[] operator with 3
+[] operator with 4
+[] operator with 5
+[] operator with 6
+Entering copy constructor
+[] operator with 0
+[] operator with 1
+[] operator with 2
+[] operator with 3
+[] operator with 4
+[] operator with 5
+[] operator with 6
+Entering destructor
+In PopulateList
+[] operator with 0
+[] operator with 1
+[] operator with 2
+[] operator with 3
+[] operator with 4
+[] operator with 5
+[] operator with 6
+[] operator with 7
+[] operator with 8
+[] operator with 9
+[] operator with 10
+[] operator with 11
+[] operator with 12
+[] operator with 13
+[] operator with 14
+[] operator with 15
+[] operator with 16
+Out PopulateList
+0 1 4 9 16 25 36 
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 
+Entering + operator
+Entering constructor
+[] operator with 0
+[] operator with 1
+[] operator with 2
+[] operator with 3
+[] operator with 4
+[] operator with 5
+[] operator with 6
+[] operator with 7
+[] operator with 8
+[] operator with 9
+[] operator with 10
+[] operator with 11
+[] operator with 12
+[] operator with 13
+[] operator with 14
+[] operator with 15
+[] operator with 16
+[] operator with 17
+[] operator with 18
+[] operator with 19
+[] operator with 20
+[] operator with 21
+[] operator with 22
+[] operator with 23
+Exiting + operator
+Entering copy constructor
+Entering destructor
+Entering destructor
+0 1 4 9 16 25 36 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 
+[] operator with 4
+[] operator with -5
+[] operator with 750
+100 1 4 9 100 25 36 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 100 
+100 1 4 9 100 25 36 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 100 0 0 0 0 0 0 
+Entering copy constructor
+100 1 4 9 100 25 36 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 100 0 0 0 0 0 0 
+100 1 4 9 100 
+Entering destructor
+Entering destructor
+Entering destructor
+Entering destructor

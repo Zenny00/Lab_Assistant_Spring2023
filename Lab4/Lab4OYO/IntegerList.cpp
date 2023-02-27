@@ -11,6 +11,7 @@ IntegerList::IntegerList()
 }
 
 IntegerList::IntegerList(int size) {
+	cout << "Entering constructor" << endl;
 	list = new int[size];
 	numElements = size;
 	for (int ndx = 0; ndx < size; ndx++)
@@ -18,10 +19,12 @@ IntegerList::IntegerList(int size) {
 }
 
 IntegerList::~IntegerList() {
+	cout << "Entering destructor" << endl;
 	delete[] list;
 }
 
 IntegerList::IntegerList(const IntegerList &obj) {
+	cout << "Entering copy constructor" << endl;
 	numElements = obj.numElements;
 	list = new int[numElements];
 	for (int i = 0; i < numElements; i++)
@@ -40,6 +43,7 @@ const IntegerList IntegerList::operator=(const IntegerList &right) {
 
 const IntegerList IntegerList::operator+(const IntegerList &right)
 {
+	cout << "Entering + operator" << endl;
 	// Combine the two lists into one and return the IntegerList list object that results
 	
 	int new_size = numElements + right.numElements; // The size of the new IntegerList should be the sum of the two input IntegerLists
@@ -53,11 +57,13 @@ const IntegerList IntegerList::operator+(const IntegerList &right)
 	for (int i = 0; i < right.numElements; i++)
 		l3[numElements + i] = right.list[i];
 
+	cout << "Exiting + operator" << endl;
 	return l3;
 }
 
 int & IntegerList::operator[](const int &index)
 {
+	cout << "[] operator with " << index << endl;
 	if (index < 0)
 		return list[0];
 	else if (index > numElements - 1)
