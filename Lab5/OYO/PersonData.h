@@ -26,13 +26,39 @@ class PersonData
 		string getZip() { return zip; }
 		string getPhone() { return phone; }
 
-		void setLastName(string lastName) { this->lastName = lastName; }
-		void setFirstName(string firstName) { this->firstName = firstName; }
-		void setAddress(string address) { this->address = address; }
-		void setCity(string city) { this->city = city; }
-		void setState(string state) { this->state = state; }
-		void setZip(string zip) { this->zip = zip; }
+		void setName(string lastName, string firstName) 
+		{
+			this->lastName = lastName; 
+			this->firstName = firstName;
+		}
+
+		void setAddress(string address, string city, string state, string zip) 
+		{ 
+			this->address = address;
+			this->city = city;
+			this->state = state; 
+			this->zip = zip; 
+		}
+
 		void setPhone(string phone) { this->phone = phone; }
+
+		void PrintRecord()
+		{
+			cout << lastName << ", " << firstName << endl;
+			cout << address << endl;
+			cout << city << ", " << state << " " << zip << endl;
+			cout << phone << endl;
+		}
+
+		string getRecord()
+		{
+			string record;
+			record += lastName + ", " + firstName + " / ";
+			record += address + " / ";
+			record += city + ", " + state + " " + zip + " / ";
+			record += phone;
+			return record;
+		}
 };
 
 #endif
