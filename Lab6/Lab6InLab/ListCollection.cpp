@@ -26,6 +26,7 @@ ListCollection::ListCollection(const ListCollection &obj) {
 const ListCollection ListCollection::operator=(const ListCollection &right) {
 	delete[] list;
 	numElements = right.numElements;
+	numCapacity = right.numCapacity;
 	list = new int[numElements];
 
 	for (int i = 0; i < numElements; i++)
@@ -149,7 +150,7 @@ const ListCollection ListCollection::sublist(int start)
 	ListCollection l3(num); // New sublist
 
 	int index = 0;
-	for (int i = start; i < numElements - 1; i++)
+	for (int i = start; i < numElements; i++)
 	{
 		l3.list[index] = list[i];
 		index++;
@@ -161,8 +162,9 @@ const ListCollection ListCollection::sublist(int start)
 
 const ListCollection ListCollection::sort()
 {
-	ListCollection l3(numElements);
+	ListCollection l3(numCapacity);
 	l3 = *this;
+	l3.numCapacity = numElements;
 	
 	for (int i = 0; i < numElements - 1; i++)
 		for (int j = 0; j < numElements - 1 - i; j++)
@@ -172,7 +174,7 @@ const ListCollection ListCollection::sort()
 				l3.list[j] = l3.list[j + 1];
 				l3.list[j + 1] = tmp;
 			}
-
+	
 	return l3;
 }
 
@@ -280,19 +282,18 @@ void ListCollection::insert(int index, int element)
 	{
 		pushFront(element);
 	} 
-	else if (index >= numElements - 1)
+	else if (index > numElements - 1)
 	{
 		pushBack(element);
 	}
 	else
 	{
-		for (int i = index; i < numElements - 1; i++)
-			list[i + 1] = list[i];
-		
-		list[index] = element;
-	}
+		for (int j = numElements; j >= index; j--)
+			list[j + 1] = list[j];
 
-	numElements++;
+		list[index] = element;
+		numElements++;
+	}
 }
 
 void ListCollection::remove(int index)

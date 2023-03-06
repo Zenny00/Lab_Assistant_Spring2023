@@ -119,7 +119,7 @@ int main() {
 
     cout << endl;
 
-    l3.remove(4);
+    l3.remove(4); // <-------
     l3.displayList();
     cout << l3.size() << "  " << l3.capacity() << endl;
 
