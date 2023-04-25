@@ -62,5 +62,3 @@ int main() {
 	double result = evalstack.top();
 	cout << "Value = " << result << endl;
 }
-
-
